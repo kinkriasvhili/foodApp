@@ -1,0 +1,11 @@
+/* Nav.module.css */
+.nav {
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}

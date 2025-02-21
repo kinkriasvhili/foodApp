@@ -1,0 +1,47 @@
+/* FoodItem.module.css */
+.itemContainer {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 35vw;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.itemContainer:hover {
+  transform: scale(1.05);
+}
+
+.itemTitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.itemImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.itemButton {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.itemButton:hover {
+  background-color: #e65c00;
+}
