@@ -1,0 +1,54 @@
+/* FoodDetails.module.css */
+.foodDetailsContainer {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 40vw;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.foodDetailsContainer:hover {
+  transform: scale(1.02);
+}
+
+.detailsName {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.detailsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.foodDetailsContainer div span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin: 5px 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+}
+
+li {
+  text-align: left;
+  font-size: 1rem;
+  color: #444;
+  margin: 5px 0;
+}
