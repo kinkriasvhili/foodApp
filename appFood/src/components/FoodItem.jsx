@@ -3,6 +3,7 @@ import styles from "../styles/FoodItem.module.css";
 export default function FoodItme({ food, foodData, setFoodId }) {
   const handleClick = () => {
     setFoodId(food.id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <div className={styles.itemContainer}>

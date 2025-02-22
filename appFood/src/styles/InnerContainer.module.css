@@ -3,3 +3,14 @@
   padding: 10px;
   margin: 10px;
 }
+@media (max-width: 1000px) {
+  .innerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}

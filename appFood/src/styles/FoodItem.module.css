@@ -45,3 +45,13 @@
 .itemButton:hover {
   background-color: #e65c00;
 }
+
+@media (max-width: 1000px) {
+  .itemContainer {
+    padding: 0;
+    margin: 0;
+    width: 65vw;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+}

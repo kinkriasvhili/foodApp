@@ -52,3 +52,15 @@ li {
   color: #444;
   margin: 5px 0;
 }
+
+@media (max-width: 1000px) {
+  .foodDetailsContainer {
+    padding: 0;
+    margin: 0;
+    width: 65vw;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    padding: 10px;
+  }
+}
