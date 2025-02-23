@@ -9,22 +9,32 @@ import FoodDetails from "./components/FoodDetails";
 export default function App() {
   const [foodData, setFoodData] = useState([]);
   const [foodId, setFoodId] = useState("658615");
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div>
       <Nav />
-      <Search foodData={foodData} setFoodData={setFoodData} />
-      <Container>
-        <InnerContainer>
-          <FoodList foodData={foodData} setFoodId={setFoodId} />
-        </InnerContainer>
-        <InnerContainer>
-          <FoodDetails
-            foodId={foodId}
-            setFoodId={setFoodId}
-            foodData={foodData}
-          />
-        </InnerContainer>
-      </Container>
+      <Search
+        setIsLoading={setIsLoading}
+        foodData={foodData}
+        setFoodData={setFoodData}
+      />
+      {isLoading ? (
+        <h2>..Loading</h2>
+      ) : (
+        <Container>
+          <InnerContainer>
+            <FoodList foodData={foodData} setFoodId={setFoodId} />
+          </InnerContainer>
+          <InnerContainer>
+            <FoodDetails
+              foodId={foodId}
+              setFoodId={setFoodId}
+              foodData={foodData}
+            />
+          </InnerContainer>
+        </Container>
+      )}
     </div>
   );
 }
