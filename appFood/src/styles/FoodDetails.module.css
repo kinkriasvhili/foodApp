@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -18,7 +17,7 @@
 }
 
 .detailsName {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
@@ -31,12 +30,12 @@
   margin-bottom: 15px;
 }
 
-.foodDetailsContainer div span {
-  display: block;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #555;
-  margin: 5px 0;
+.someDetailsContiner {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 h2 {
@@ -52,6 +51,48 @@ li {
   color: #444;
   margin: 5px 0;
 }
+.ingredientsContainer,
+.instructionContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.ingredientsContainer:hover,
+.instructionContainer:hover {
+  transform: scale(1.02);
+}
+.instructionTitle,
+.ingredientsTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.instructionLine,
+.ingredientsLine {
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 10px;
+  background: #fff;
+  margin-bottom: 10px;
+  border-left: 4px solid #007bff;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ingredientsLine img {
+  border-radius: 5px;
+  object-fit: cover;
+}
 
 @media (max-width: 1000px) {
   .foodDetailsContainer {
@@ -60,7 +101,6 @@ li {
     width: 65vw;
     margin-bottom: 20px;
     margin-top: 20px;
-
     padding: 10px;
   }
 }

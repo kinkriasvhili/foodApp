@@ -1,5 +1,9 @@
 import styles from "../styles/FoodDetails.module.css";
 import { useEffect, useState } from "react";
+import Ingredients from "./Ingredients";
+import Instructions from "./Instructions";
+import ServingDetails from "./ServingDetails";
+import DetailsHeader from "./DetailsHeader";
 
 export default function FoodDetails({ foodId }) {
   const [food, setFood] = useState({});
@@ -23,38 +27,27 @@ export default function FoodDetails({ foodId }) {
     }
     fetchFood();
   }, [foodId]);
+  console.log(food);
   return (
-    <div className={styles.foodDetailsContainer}>
-      <div>
-        <h3 className={styles.detailsName}>{food.title}</h3>
-        <img className={styles.detailsImage} src={food.image} alt="" />
-      </div>
-      <div>
-        <span>
-          ⏰<strong>{food.readyInMinutes} Minutes</strong>
-        </span>
-        <span>
-          👪<strong>Serves: {food.servings}</strong>
-        </span>
-        <span>{food.vegetarian ? "🥦Vegetarian" : "🥩Non-Vegetarian"}</span>
-        <span>{food.vegan ? "🐄 Vegan" : ""}</span>
-      </div>
-      <div>
-        <span>${Math.round(food.pricePerServing / 100)} Per Serving</span>
-      </div>
-      <div>
-        {isLoading ? (
-          <p>...Loading</p>
-        ) : (
+    <>
+      {isLoading ? (
+        <p>...Loading</p>
+      ) : (
+        <div className={styles.foodDetailsContainer}>
           <div>
-            <h2>Instructions</h2>
-            {food.analyzedInstructions[0].steps.map((step) => {
-              return <li key={step.number}>{step.step}</li>;
-            })}
+            <DetailsHeader food={food} />
           </div>
-        )}
-        {console.log(food)}
-      </div>
-    </div>
+          <div className={styles.someDetailsContiner}>
+            <ServingDetails food={food} />
+          </div>
+          <div>
+            <Ingredients food={food} />
+          </div>
+          <div style={{ "margin-top": "30px" }}>
+            <Instructions food={food} />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
